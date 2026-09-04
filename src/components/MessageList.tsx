@@ -21,7 +21,7 @@ export function MessageList({messages, currentUser}: MessageListProps) {
                 {messages.map((message) => {
                     const isOwn = message.author === currentUser
                     return (
-                        <li key={message.id} className={isOwn ? 'mt-4' : 'mt-2'}>
+                        <li key={message._id} className={isOwn ? 'mt-4' : 'mt-2'}>
                             <MessageBubble message={message} isOwn={isOwn}/>
                         </li>
                     )
