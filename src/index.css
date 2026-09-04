@@ -15,6 +15,8 @@
   --color-muted: #B3BCC3;
   --color-gray: #B3BCC3;
   --color-page: #f7f7f7;
+  --color-bubble-border: #D6DCE0;
+  --color-bubble-secondary: #B3BCC3;
 }
 
 :root {
