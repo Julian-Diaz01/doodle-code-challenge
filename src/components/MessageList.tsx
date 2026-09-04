@@ -17,7 +17,7 @@ export function MessageList({messages, currentUser}: MessageListProps) {
 
     return (
         <ScrollArea className="min-h-0 flex-1">
-            <ul aria-live="polite" className="flex flex-col px-6 py-4">
+            <ul role="log" aria-live="polite" className="flex flex-col px-6 py-4">
                 {messages.map((message) => {
                     const isOwn = message.author === currentUser
                     return (
@@ -26,8 +26,8 @@ export function MessageList({messages, currentUser}: MessageListProps) {
                         </li>
                     )
                 })}
-                <div ref={bottomRef}/>
             </ul>
+            <div ref={bottomRef}/>
         </ScrollArea>
     )
 }
