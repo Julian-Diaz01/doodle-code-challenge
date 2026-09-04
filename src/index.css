@@ -6,12 +6,15 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-composer: #4a90d2;
-  --color-send: #f2795a;
-  --color-send-hover: #ef6644;
-  --color-outgoing: #fbf3b9;
-  --color-ink: #1f2933;
-  --color-muted: #9aa0aa;
+  --color-composer: #3798D4;
+  --color-composer-border: #2e77a4;
+  --color-send: #FF876D;
+  --color-send-hover: #f56b4d;
+  --color-outgoing: #FCF6C5;
+  --color-ink: #434b54;
+  --color-muted: #B3BCC3;
+  --color-gray: #B3BCC3;
+  --color-page: #f7f7f7;
 }
 
 :root {
