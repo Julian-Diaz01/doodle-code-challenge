@@ -14,7 +14,7 @@ export function ChatWindow({ messages, currentUser }: ChatWindowProps) {
       className="flex h-dvh justify-center bg-page"
       style={{ backgroundImage: `url(${bodyBg})`, backgroundRepeat: 'repeat', backgroundSize: '1100px' }}
     >
-      <div className="flex h-full w-full max-w-xl flex-col overflow-hidden">
+      <div className="flex h-full w-full max-w-[640px]  flex-col overflow-hidden">
         <MessageList messages={messages} currentUser={currentUser} />
         <Composer />
       </div>
