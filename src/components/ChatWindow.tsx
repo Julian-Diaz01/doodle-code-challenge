@@ -21,7 +21,7 @@ export function ChatWindow({ currentUser }: ChatWindowProps) {
         ) : (
           <MessageList messages={messages} currentUser={currentUser} />
         )}
-        <Composer />
+        <Composer currentUser={currentUser} />
       </div>
     </div>
   )
