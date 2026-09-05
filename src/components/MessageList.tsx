@@ -17,17 +17,17 @@ export function MessageList({messages, currentUser}: MessageListProps) {
 
     return (
         <ScrollArea className="min-h-0 flex-1">
-            <ul aria-live="polite" className="flex flex-col px-6 py-4">
+            <ul role="log" aria-live="polite" className="flex flex-col px-6 py-4">
                 {messages.map((message) => {
                     const isOwn = message.author === currentUser
                     return (
-                        <li key={message.id} className={isOwn ? 'mt-4' : 'mt-2'}>
+                        <li key={message._id} className={isOwn ? 'mt-4' : 'mt-2'}>
                             <MessageBubble message={message} isOwn={isOwn}/>
                         </li>
                     )
                 })}
-                <div ref={bottomRef}/>
             </ul>
+            <div ref={bottomRef}/>
         </ScrollArea>
     )
 }

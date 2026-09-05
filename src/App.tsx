@@ -1,8 +1,9 @@
 import { ChatWindow } from './components/ChatWindow'
-import { CURRENT_USER, sampleMessages } from './data/sampleMessages'
+
+const CURRENT_USER = 'Julian'
 
 function App() {
-  return <ChatWindow messages={sampleMessages} currentUser={CURRENT_USER} />
+  return <ChatWindow currentUser={CURRENT_USER} />
 }
 
 export default App
