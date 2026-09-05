@@ -12,17 +12,19 @@ export function ChatWindow({ currentUser }: ChatWindowProps) {
 
   return (
     <div
-      className="flex h-dvh justify-center bg-page"
+      className="flex h-dvh flex-col bg-page"
       style={{ backgroundImage: `url(${bodyBg})`, backgroundRepeat: 'repeat', backgroundSize: '1100px' }}
     >
-      <div className="flex h-full w-full max-w-[640px]  flex-col overflow-hidden">
-        {error ? (
-          <p className="m-auto text-bubble-secondary">Couldn't load messages. Please try again later.</p>
-        ) : (
-          <MessageList messages={messages} currentUser={currentUser} />
-        )}
-        <Composer currentUser={currentUser} />
+      <div className="flex flex-1 justify-center overflow-hidden">
+        <div className="flex h-full w-full max-w-[640px] flex-col overflow-hidden">
+          {error ? (
+            <p className="m-auto text-bubble-secondary">Couldn't load messages. Please try again later.</p>
+          ) : (
+            <MessageList messages={messages} currentUser={currentUser} />
+          )}
+        </div>
       </div>
+      <Composer currentUser={currentUser} />
     </div>
   )
 }
