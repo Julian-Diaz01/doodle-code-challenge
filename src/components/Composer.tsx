@@ -22,29 +22,31 @@ export function Composer({ currentUser }: ComposerProps) {
 
   return (
     <form
-      className="flex items-center gap-2 bg-composer px-2 py-2"
+      className="flex items-center justify-center gap-2 bg-composer px-2 py-2"
       onSubmit={handleSubmit}
     >
-      <label htmlFor="message" className="sr-only">
-        Message
-      </label>
-      <Input
-        id="message"
-        name="message"
-        type="text"
-        placeholder="Message"
-        autoComplete="off"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        className="h-11 rounded-sm border-composer-border border-2 bg-white px-4 text-base text-ink placeholder:text-gray caret-composer-border focus-visible:ring-composer-border/50 focus-visible:border-composer-border"
-      />
-      <Button
-        type="submit"
-        disabled={isPending}
-        className="h-11 shrink-0 rounded-sm bg-send px-5 text-base font-medium text-white hover:bg-send-hover focus-visible:ring-white"
-      >
-        Send
-      </Button>
+      <div className="flex w-full max-w-[640px] items-center gap-2 px-6">
+        <label htmlFor="message" className="sr-only">
+          Message
+        </label>
+        <Input
+          id="message"
+          name="message"
+          type="text"
+          placeholder="Message"
+          autoComplete="off"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="h-11 rounded-sm border-composer-border border-2 bg-white px-4 text-base text-ink placeholder:text-gray caret-composer-border focus-visible:ring-composer-border/50 focus-visible:border-composer-border"
+        />
+        <Button
+          type="submit"
+          disabled={isPending}
+          className="h-11 shrink-0 rounded-sm bg-send px-5 text-base font-medium text-white hover:bg-send-hover focus-visible:ring-white"
+        >
+          Send
+        </Button>
+      </div>
     </form>
   )
 }
