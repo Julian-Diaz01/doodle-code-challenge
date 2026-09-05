@@ -8,7 +8,7 @@ interface ChatWindowProps {
 }
 
 export function ChatWindow({ currentUser }: ChatWindowProps) {
-  const { messages, error } = useMessages()
+  const { messages, isLoading, error } = useMessages()
 
   return (
     <div
@@ -19,6 +19,10 @@ export function ChatWindow({ currentUser }: ChatWindowProps) {
         <div className="flex h-full w-full max-w-[640px] flex-col overflow-hidden">
           {error ? (
             <p className="m-auto text-bubble-secondary">Couldn't load messages. Please try again later.</p>
+          ) : isLoading ? (
+            <p className="m-auto text-bubble-secondary">Loading messages…</p>
+          ) : messages.length === 0 ? (
+            <p className="m-auto text-bubble-secondary">No messages yet. Say hi!</p>
           ) : (
             <MessageList messages={messages} currentUser={currentUser} />
           )}
